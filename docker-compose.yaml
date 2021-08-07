@@ -1,6 +1,11 @@
 version: '3.8'
 
 services:
+  config-server:
+    build: 
+      context: ./config-server
+    ports:
+      - 8888:8888
   elasticdb:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
     environment:
